@@ -1,0 +1,48 @@
+﻿<Window x:Class="TicTacToe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tic Tac Toe" Height="450" Width="450"
+        Icon="1267357_200_cLZ_icon.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="44*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="lblStatus" Content="Spieler X ist an der Reihe" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Grid.Column="2" Height="46" Width="200" Grid.RowSpan="2" FontSize="14" FontWeight="Bold"/>
+
+        <Grid x:Name="gameGrid" Grid.Row="1" Margin="1,10,10,10" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btn0" Grid.Row="0" Grid.Column="0" Content="" Click="Button_Click" IsEnabled="{Binding Button0Enabled}" FontSize="48"/>
+            <Button x:Name="btn1" Grid.Row="0" Grid.Column="1" Content="" Click="Button_Click" IsEnabled="{Binding Button1Enabled}" FontSize="48"/>
+            <Button x:Name="btn2" Grid.Row="0" Grid.Column="2" Content="" Click="Button_Click" IsEnabled="{Binding Button2Enabled}" FontSize="48"/>
+            <Button x:Name="btn3" Grid.Row="1" Grid.Column="0" Content="" Click="Button_Click" IsEnabled="{Binding Button3Enabled}" FontSize="48"/>
+            <Button x:Name="btn4" Grid.Row="1" Grid.Column="1" Content="" Click="Button_Click" IsEnabled="{Binding Button4Enabled}" FontSize="48"/>
+            <Button x:Name="btn5" Grid.Row="1" Grid.Column="2" Content="" Click="Button_Click" IsEnabled="{Binding Button5Enabled}" FontSize="48"/>
+            <Button x:Name="btn6" Grid.Row="2" Grid.Column="0" Content="" Click="Button_Click" IsEnabled="{Binding Button6Enabled}" FontSize="48"/>
+            <Button x:Name="btn7" Grid.Row="2" Grid.Column="1" Content="" Click="Button_Click" IsEnabled="{Binding Button7Enabled}" FontSize="48"/>
+            <Button x:Name="btn8" Grid.Row="2" Grid.Column="2" Content="" Click="Button_Click" IsEnabled="{Binding Button8Enabled}" FontSize="48"/>
+
+
+        </Grid>
+
+        <Button Content="Spiel starten" HorizontalAlignment="Left" Margin="215,13,0,13" Click="btnStartGame_Click" Width="70" Grid.Column="2"/>
+        <Button Content="Neues Spiel" HorizontalAlignment="Left" Margin="311,13,0,13" Click="btnNewGame_Click" Width="74" RenderTransformOrigin="1,1" Grid.Column="2"/>
+    </Grid>
+</Window>
